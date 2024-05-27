@@ -175,8 +175,10 @@ router.get("/liga/:id", async (req, res) =>{
  *       - edicao
  *       - jogos
  *      example:
- *        nome_usuario: Cristiano Ronaldo
- *        email: cristiano@gmail.com
+ *        nome_liga: liga1
+ *        id_regiao: 1
+ *        edicao: 23
+ *        jogos: 50
  */
 
 /**

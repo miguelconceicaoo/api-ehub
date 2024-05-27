@@ -160,8 +160,8 @@ router.get("/usuario_liga/:id", async (req, res) =>{
  *       - id_usuario
  *       - id_time
  *      example:
- *        nome_usuario: Cristiano Ronaldo
- *        email: cristiano@gmail.com
+ *        id_usuario: 3
+ *        id_time: 4
  */
 
 /**

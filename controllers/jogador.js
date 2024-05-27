@@ -12,7 +12,7 @@ const db = require('../db/models/index'); // Incluindo conexão com o banco de d
  *    tags: [jogador] 
  *    responses:
  *      200:  
- *        description: Todos usuários.
+ *        description: Todos jogadores.
  *        content:
  *          application/json:
  *            schema:
@@ -103,10 +103,10 @@ router.get("/jogador", async (req, res) => {
  *       schema:
  *         type: string
  *       required: true
- *       description: id do usuário
+ *       description: id do jogador
  *    responses:
  *      200:  
- *        description: Todos usuários.
+ *        description: Todos jogadores.
  *        content:
  *          application/json:
  *            schema:
@@ -168,8 +168,10 @@ router.get("/jogador/:id", async (req, res) =>{
  *       - funcao
  *       - birth
  *      example:
- *        nome_usuario: Cristiano Ronaldo
- *        email: cristiano@gmail.com
+ *        nome_jogador: Leonardo
+ *        nacionalidade: França
+ *        funcao: adc
+ *        birth: q24e54
  */
 
 /**
@@ -224,7 +226,7 @@ router.post('/jogador', async (req, res) => {
  *       schema:
  *         type: string
  *       required: true
- *       description: Editar usuário
+ *       description: Id do jogador
   *    requestBody:
  *      required: true
  *      content: 
@@ -234,13 +236,13 @@ router.post('/jogador', async (req, res) => {
  *            $ref: '#/components/schemas/jogador'
  *    responses:
  *      200:  
- *        description: Editar usuário.      
+ *        description: Editar jogador.      
  */
 
-router.put("/jogador:id", async (req, res) => {
+router.put("/jogador/:id", async (req, res) => {
     // Receber os dados enviados no corpo da requisão
     var dados = req.body;
-    const { id } = req.params;
+    var { id } = req.params;
     // Editar no banco de dados
     await db.jogador.update(dados, { where: {id} })
     .then(() => {

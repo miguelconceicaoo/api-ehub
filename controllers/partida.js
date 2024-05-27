@@ -160,8 +160,8 @@ router.get("/partida/:id", async (req, res) =>{
  *       - data
  *       - hora 
 *      example:
- *        nome_usuario: Cristiano Ronaldo
- *        email: cristiano@gmail.com
+ *        data: 12/05/23
+ *        hora: 14:13
  */
 
 /**

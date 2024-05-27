@@ -154,19 +154,20 @@ router.get("/noticia/:id", async (req, res) =>{
  *          description: FK id_liga
  *        portal_noticia:
  *          type: string
- *          description: portal noticia
+ *          description: portal da noticia
  *        noticia_url:
  *          type: string
- *          description: url
+ *          description: url da noticia
  *      required:
  *       - id
  *       - id_liga
  *       - portal_noticia
- *       - id_liga
  *       - noticia_url
  *      example:
- *        nome_usuario: Cristiano Ronaldo
- *        email: cristiano@gmail.com
+ *        id: 2
+ *        id_liga: 3
+ *        portal_noticia: uol
+ *        noticia_url: www.noticia.com.br
  */
 
 /**
@@ -184,13 +185,13 @@ router.get("/noticia/:id", async (req, res) =>{
  *            $ref: '#/components/schemas/noticia'
  *    responses:
  *      200:  
- *        description: noticia cadastrado com sucesso!  
- */ 
+ *        description: noticia cadastrada com sucesso!  
+ */  
 
 router.post('/noticia', async (req, res) => {
     // Receber dados enviados no corpo da requisição
     var dados = req.body;
-    //console.log(dados);
+    //console.log(dados); 
 
     // Salvar no banco de dados
     await db.noticia.create(dados).then((dadosNoticia) => {
@@ -221,7 +222,7 @@ router.post('/noticia', async (req, res) => {
  *       schema:
  *         type: string
  *       required: true
- *       description: Editar usuário
+ *       description: Editar noticia
   *    requestBody:
  *      required: true
  *      content: 
@@ -231,7 +232,7 @@ router.post('/noticia', async (req, res) => {
  *            $ref: '#/components/schemas/noticia'
  *    responses:
  *      200:  
- *        description: Editar usuário.      
+ *        description: Editar noticia.      
  */
 
 router.put("/noticia/:id", async (req, res) => {

@@ -28,6 +28,7 @@ const noticia_liga = require('./controllers/noticia_liga');
 const liga = require('./controllers/liga'); 
 const jogador = require('./controllers/jogador'); 
 const jogador_time = require('./controllers/jogador_time'); 
+const noticia = require('./controllers/noticia'); 
 
 // Rotas
 app.use('/', usuario);
@@ -42,6 +43,7 @@ app.use('/', noticia_liga);
 app.use('/', liga);
 app.use('/', jogador);
 app.use('/', jogador_time);
+app.use('/', noticia);
 
 //swagger
 const swaggerSpec = {

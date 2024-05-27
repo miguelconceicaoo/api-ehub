@@ -148,19 +148,19 @@ router.get("/noticia_liga/:id", async (req, res) =>{
  *      properties:
  *        id:
  *          type: integer
- *          descripition: Nome do usuário
+ *          descripition: Id
  *        id_noticia:
  *          type: integer
- *          description: Email do usuário
+ *          description: id noticia
  *        id_liga:
  *          type: integer
- *          description: Email do usuário
+ *          description: id liga
  *      required:
  *       - nome_usuario
  *       - email
  *      example:
- *        nome_usuario: Cristiano Ronaldo
- *        email: cristiano@gmail.com
+ *        id_noticia:
+ *        id_liga: 
  */
 
 /**

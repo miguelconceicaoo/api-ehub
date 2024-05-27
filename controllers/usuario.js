@@ -2,7 +2,6 @@ const express = require('express'); // Importando express - gerencia requisiçõ
 const router = express.Router(); // Importando rotas - gerenciando somente as rotas
 const db = require('../db/models/index'); // Incluindo conexão com o banco de dados
 
-
 // Rota listar
 
 /**
@@ -238,7 +237,7 @@ router.post('/usuario', async (req, res) => {
 router.put("/usuario/:id", async (req, res) => {
     // Receber os dados enviados no corpo da requisão
     var dados = req.body;
-    const { id } = req.params;
+    var { id } = req.params;
     // Editar no banco de dados
     await db.usuario.update(dados, { where: {id} })
     .then(() => {

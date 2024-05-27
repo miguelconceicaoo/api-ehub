@@ -155,8 +155,7 @@ router.get("/regiao/:id", async (req, res) =>{
  *       - id
  *       - nome_regiao
  *      example:
- *        nome_usuario: Cristiano Ronaldo
- *        email: cristiano@gmail.com
+ *        nome_regiao: europa
  */
 
 /**
