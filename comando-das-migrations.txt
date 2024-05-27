@@ -1,0 +1,14 @@
+npx sequelize-cli migration:generate --name create-usuario
+npx sequelize-cli migration:generate --name create-usuario_time
+npx sequelize-cli migration:generate --name create-time
+npx sequelize-cli migration:generate --name create-jogador_time
+npx sequelize-cli migration:generate --name create-jogador
+npx sequelize-cli migration:generate --name create-time_liga
+npx sequelize-cli migration:generate --name create-partida_time_liga
+npx sequelize-cli migration:generate --name create-partida
+npx sequelize-cli migration:generate --name create-usuario_liga
+npx sequelize-cli migration:generate --name create-liga
+npx sequelize-cli migration:generate --name create-noticia_liga
+npx sequelize-cli migration:generate --name create-noticia
+npx sequelize-cli migration:generate --name create-regiao
+

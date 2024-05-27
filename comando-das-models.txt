@@ -1,0 +1,16 @@
+npx sequelize-cli model:generate --name regiao --attributes nome_regiao:string
+npx sequelize-cli model:generate --name liga --attributes nome_liga:string,regiao:integer,edicao:string,jogos:string
+npx sequelize-cli model:generate --name noticia_liga --attributes id_noticia:integer,id_liga:integer
+npx sequelize-cli model:generate --name noticia --attributes id_liga:integer,portal_noticia:string,noticia_url:string
+npx sequelize-cli model:generate --name usuario_liga --attributes id_usuario:integer,id_time:integer
+npx sequelize-cli model:generate --name partida --attributes data:string,hora:string
+npx sequelize-cli model:generate --name partida_time_liga --attributes id_liga:string,id_time2:string,id_time1:string
+npx sequelize-cli model:generate --name time_liga --attributes id_time:integer,id_liga:integer
+npx sequelize-cli model:generate --name jogador --attributes nome_jogador:string,nacionalidade:string,funcao:string,birth:string
+npx sequelize-cli model:generate --name jogador_time --attributes id_jogador:string
+npx sequelize-cli model:generate --name time --attributes nome_time:string
+npx sequelize-cli model:generate --name usuario_time --attributes id_usuario:integer,id_time:integer
+npx sequelize-cli model:generate --name usuario --attributes nome_usuario:string,email:string
+
+
+npx sequelize-cli model:generate --name usuario --attributes nome_usuario:string,email:string

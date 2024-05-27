@@ -1,0 +1,10 @@
+//incluir modulo para gerenciar diretorios e cominhos
+const path = require('path');
+
+//indicar o local dos diretorios relacionado ao banco de dados
+module.exports = {
+    'config': path.resolve('db','config','config.js'),
+    'models-path': path.resolve('db','models'),
+    'seeders-path': path.resolve('db','seeders'),
+    'migrations-path': path.resolve('db','migrations')
+}
